@@ -1,4 +1,7 @@
-# PHP Package Boilerplate
+<h1 align="center">PHP Package Boilerplate</h1>
+
+<p align="center"> A template repository for PHP package.</p>
+
 
 **Start Project:**
 
