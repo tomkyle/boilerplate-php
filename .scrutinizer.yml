@@ -9,6 +9,7 @@ build:
   tests:
     override:
       -
+        # The 'phpdbg -qrr' will make Scrutinizer generating coverage with PHP 8
         command: 'phpdbg -qrr vendor/bin/phpunit --coverage-clover tests/build/clover.xml'
         coverage:
           file: 'tests/build/clover.xml'
