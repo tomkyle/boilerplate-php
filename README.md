@@ -2,21 +2,44 @@
 
 <p align="center"> A template repository for PHP package.</p>
 
+---
+
+
 
 **Start Project:**
 
-```php
+
+Once this package has been added to Packagist/Composer:
+
+```bash
 $ composer create-project tomkyle/boilerplate-php new-project  
 ```
+
+
+The traditional way is using `git clone`:
+
+```bash
+$ git clone git@github.com:tomkyle/test-ci-configs.git
+# or
+$ git clone https://github.com/tomkyle/test-ci-configs.git
+```
+
+
+
+---
+
 
 
 
 ## Installation
 
-
 ```bash
 $ composer require vendor/package:^1.0
 ```
+
+
+
+## Requirements
 
 This package requires a *PSR-18 HTTP client* implementation and a *PSR-17 HTT factory* implementation. Suggestions are [Guzzle 7](https://packagist.org/packages/guzzlehttp/guzzle) via [guzzlehttp/guzzle](https://packagist.org/packages/guzzlehttp/) and Nyholm's [nyholm/psr7](nyholm/psr7) which (despite its name) provides the PSR-17 factories as well:
 
@@ -39,4 +62,5 @@ $ composer test
 $ vendor/bin/phpunit
 ```
 
+And there's more in the `scripts` section of **composer.json**.
 
