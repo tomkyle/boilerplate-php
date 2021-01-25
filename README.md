@@ -28,13 +28,24 @@ $ git clone https://github.com/tomkyle/boilerplate-php.git
 
 ## Requirements
 
-This package requires a *PSR-18 HTTP client* implementation and a *PSR-17 HTT factory* implementation. Suggestions are [Guzzle 7](https://packagist.org/packages/guzzlehttp/guzzle) via [guzzlehttp/guzzle](https://packagist.org/packages/guzzlehttp/) and Nyholm's [nyholm/psr7](nyholm/psr7) which (despite its name) provides the PSR-17 factories as well:
+- [psr/log](https://packagist.org/packages/psr/log) *PSR-3 Logger implementation* 
+- [psr/cache](https://packagist.org/packages/psr/cache) *PSR-6 Cache Implementation*
+- [psr/http-factory](https://packagist.org/packages/psr/http-factory) *PSR-17 HTT factory* implementation
+- [psr/http-client](https://packagist.org/packages/psr/http-client) *PSR-18 HTTP client* implementation
+
+For PSR-3 and PSR-6, [Monolog](https://github.com/Seldaek/monolog) and the [Symfony Cache component](https://symfony.com/components/Cache) are recommended. 
+
+For PSR-18 and PSR-17, suggestions are [Guzzle 7](https://packagist.org/packages/guzzlehttp/guzzle) via [guzzlehttp/guzzle](https://packagist.org/packages/guzzlehttp/) and Nyholm's [nyholm/psr7](nyholm/psr7) which (despite its name) provides the PSR-17 factories as well.
 
 
 ```bash
 $ composer require nyholm/psr7
 $ composer require guzzlehttp/guzzle
+$ composer require monolog/monolog
+$ composer require symfony/cache
 ```
+
+
 
 
 
