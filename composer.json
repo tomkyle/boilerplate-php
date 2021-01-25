@@ -61,6 +61,6 @@
         "monolog/monolog": "PSR-3 Logger of choice",
         "nyholm/psr7": "PSR-17 factories",
         "guzzlehttp/guzzle": "PSR-18 client (as of v7)",
-        "symfony/cache": "PSR-6 and PSR-16 Cache engines",
+        "symfony/cache": "PSR-6 and PSR-16 Cache engines"
     }
 }
