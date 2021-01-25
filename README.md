@@ -6,35 +6,22 @@
 
 
 
-**Start Project:**
+## Create new project
 
 
-Once this package has been added to Packagist/Composer:
+Either using `composer create-project` …
 
 ```bash
 $ composer create-project tomkyle/boilerplate-php new-project  
 ```
 
 
-The traditional way is using `git clone`:
+… or using the traditional way using `git clone`:
 
 ```bash
 $ git clone git@github.com:tomkyle/boilerplate-php.git
 # or
 $ git clone https://github.com/tomkyle/boilerplate-php.git
-```
-
-
-
----
-
-
-
-
-## Installation
-
-```bash
-$ composer require vendor/package:^1.0
 ```
 
 
