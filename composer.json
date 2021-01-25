@@ -12,7 +12,7 @@
 
     "autoload": {
         "psr-4": {
-            "Vendor\\Namespace\\": "src/"
+            "Vendor\\Package\\": "src/"
         }
     },
 
@@ -45,10 +45,11 @@
     },
 
     "scripts": {
-        "phpstan": "phpstan analyse --configuration phpstan.neon --no-progress -vvv",
-        "phpcs": "php-cs-fixer fix -v --diff --dry-run --allow-risky=yes src/",
-        "phpcs-apply": "php-cs-fixer fix -vv --allow-risky=yes src/",
-        "phpunit": "phpunit --coverage-text",
+        "phpstan"     : "phpstan analyse --configuration phpstan.neon --no-progress -vvv",
+        "phpcs"       : "php-cs-fixer fix -v --diff --dry-run --allow-risky=yes src/",
+        "phpcs-apply" : "php-cs-fixer fix -vv --allow-risky=yes src/",
+
+        "phpunit"     : "phpunit --coverage-text",
 
         "test": [
             "@phpcs",
