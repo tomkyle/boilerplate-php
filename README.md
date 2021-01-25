@@ -19,9 +19,9 @@ $ composer create-project tomkyle/boilerplate-php new-project
 The traditional way is using `git clone`:
 
 ```bash
-$ git clone git@github.com:tomkyle/test-ci-configs.git
+$ git clone git@github.com:tomkyle/boilerplate-php.git
 # or
-$ git clone https://github.com/tomkyle/test-ci-configs.git
+$ git clone https://github.com/tomkyle/boilerplate-php.git
 ```
 
 
