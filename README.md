@@ -9,14 +9,11 @@
 ## Create new project
 
 
-Either using `composer create-project` …
+Either using `composer create-project` or using the traditional way using `git clone`:
 
 ```bash
 $ composer create-project tomkyle/boilerplate-php new-project  
 ```
-
-
-… or using the traditional way using `git clone`:
 
 ```bash
 $ git clone git@github.com:tomkyle/boilerplate-php.git
@@ -26,12 +23,16 @@ $ git clone https://github.com/tomkyle/boilerplate-php.git
 
 
 
+---
+
 ## Requirements and suggestions
 
-- [psr/log](https://packagist.org/packages/psr/log) *PSR-3 Logger implementation*  – [Monolog Logger](https://github.com/Seldaek/monolog)
-- [psr/cache](https://packagist.org/packages/psr/cache) *PSR-6 Cache Implementation – [Symfony Cache component](https://symfony.com/components/Cache)*
-- [psr/http-factory](https://packagist.org/packages/psr/http-factory) *PSR-17 HTTP factory* implementation –Nyholm's [nyholm/psr7](nyholm/psr7) which (despite its name) provides the PSR-17 factories as well.
-- [psr/http-client](https://packagist.org/packages/psr/http-client) *PSR-18 HTTP client* implementation – [Guzzle 7](https://packagist.org/packages/guzzlehttp/guzzle) via [guzzlehttp/guzzle](https://packagist.org/packages/guzzlehttp/) 
+| PSR standard                        | require                                                      | suggest                                                      |
+| ----------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| PSR-3 Logger implementation         | [psr/log](https://packagist.org/packages/psr/log)            | [Monolog Logger](https://github.com/Seldaek/monolog)         |
+| PSR-6 Cache Implementation          | [psr/cache](https://packagist.org/packages/psr/cache)        | [Symfony Cache component](https://symfony.com/components/Cache) |
+| PSR-17 HTTP factory* implementation | [psr/http-factory](https://packagist.org/packages/psr/http-factory) | [nyholm/psr7](nyholm/psr7)                                   |
+| PSR-18 HTTP client                  | [psr/http-client](https://packagist.org/packages/psr/http-client) | [Guzzle 7](https://packagist.org/packages/guzzlehttp/guzzle) |
 
 
 ```bash
@@ -43,7 +44,7 @@ $ composer require guzzlehttp/guzzle
 
 
 
-
+---
 
 ## Unit tests and development
 
