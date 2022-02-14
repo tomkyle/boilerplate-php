@@ -6,19 +6,12 @@
 
 
 
-## Create new project
-
-
-Either using `composer create-project` or using the traditional way using `git clone`:
+## Start new project
 
 ```bash
 $ composer create-project tomkyle/boilerplate-php new-project  
-```
-
-```bash
-$ git clone git@github.com:tomkyle/boilerplate-php.git
-# or
-$ git clone https://github.com/tomkyle/boilerplate-php.git
+$ cd new-project
+$ composer install
 ```
 
 
