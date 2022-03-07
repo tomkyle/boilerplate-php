@@ -23,7 +23,7 @@
     },
 
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4|^8.0",
         "ext-json": "*",
         "psr/log": "^1.1|^2.0|^3.0",
         "psr/cache": "^1.0|^2.0|^3.0",
@@ -42,7 +42,7 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "spatie/phpunit-watcher": "^1.0",
         "phpstan/phpstan": "^1.0",
-        "laminas/laminas-log": "^2.0"
+        "laminas/laminas-log": "^2.15"
     },
 
     "scripts": {
