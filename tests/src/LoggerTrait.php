@@ -31,14 +31,19 @@ trait LoggerTrait
             return $this->logger;
         }
 
-        $this->setLogger($this->createLaminasLogger());
+        $laminas_logger = $this->createLaminasLogger();
+        $psr_logger = new Laminas\Log\PsrLoggerAdapter($laminas_logger);
+
+        $this->setLogger($psr_logger);
+
         return $this->logger;
     }
 
+
     /**
-     * @return \Laminas\Log\PsrLoggerAdapter
+     * @return \Laminas\Log\Writer\Stream
      */
-    protected function createLaminasLogger() : Laminas\Log\PsrLoggerAdapter
+    protected function createLaminasLogWriter() : Laminas\Log\Writer\AbstractWriter
     {
         $loglevel = ($GLOBALS['LAMINAS_LOGLEVEL'] ?? $this->loglevel) ?: $this->loglevel;
         $filter = new Laminas\Log\Filter\Priority( $loglevel );
@@ -46,9 +51,20 @@ trait LoggerTrait
         $writer = new Laminas\Log\Writer\Stream($this->log_stream);
         $writer->addFilter($filter);
 
+        return $writer;
+    }
+
+
+    /**
+     * @return \Laminas\Log\Logger
+     */
+    protected function createLaminasLogger() : Laminas\Log\LoggerInterface
+    {
+        $writer = $this->createLaminasLogWriter();
+
         $laminasLogLogger = new Laminas\Log\Logger;
         $laminasLogLogger->addWriter($writer);
 
-        return new Laminas\Log\PsrLoggerAdapter($laminasLogLogger);
+        return $laminasLogLogger;
     }
 }
