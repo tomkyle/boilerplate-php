@@ -39,16 +39,59 @@ $ composer require guzzlehttp/guzzle
 
 ---
 
-## Unit tests and development
+## Development
 
-1. Copy `phpunit.xml.dist` to `phpunit.xml` 
-2. Run [PhpUnit](https://phpunit.de/) like this:
+### Run all tests
+
+Also have a look at the `scripts` section of **composer.json**.
 
 ```bash
 $ composer test
+# includes
+$ composer phpstan
+$ composer phpcs
+$ composer phpunit
+```
+
+### Unit tests
+
+Default configuration is **phpunit.xml.dist.** Create a custom **phpunit.xml** to apply yuor own settings.
+
+```bash
+$ composer phpunit
 # or
 $ vendor/bin/phpunit
 ```
 
-And there's more in the `scripts` section of **composer.json**.
+### PhpStan
+
+Default configuration is **phpstan.neon.dist.** Create a custom **phpstan.neon** to apply yuor own settings.
+
+```bash
+$ composer phpstan
+# which includes
+$ vendor/bin/phpstan analyse
+```
+
+### PhpCS
+
+Default configuration is **.php-cs-fixer.dist.php.**
+
+```bash
+$ composer phpcs
+# aliases
+$ vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
+```
+
+**To apply all CS fixes:**
+
+```bash
+$ composer phpcs:apply
+# aliases 
+$ vendor/bin/php-cs-fixer fix --verbose --diff
+```
+
+
+
+
 
