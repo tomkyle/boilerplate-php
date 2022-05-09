@@ -1,4 +1,5 @@
 <?php
+
 namespace tests;
 
 use Psr;
@@ -25,7 +26,7 @@ trait LoggerTrait
     /**
      * @return \Psr\Log\LoggerInterface
      */
-    protected function getLogger() : Psr\Log\LoggerInterface
+    protected function getLogger(): Psr\Log\LoggerInterface
     {
         if ($this->logger) {
             return $this->logger;
@@ -43,10 +44,10 @@ trait LoggerTrait
     /**
      * @return \Laminas\Log\Writer\Stream
      */
-    protected function createLaminasLogWriter() : Laminas\Log\Writer\AbstractWriter
+    protected function createLaminasLogWriter(): Laminas\Log\Writer\AbstractWriter
     {
         $loglevel = ($GLOBALS['LAMINAS_LOGLEVEL'] ?? $this->loglevel) ?: $this->loglevel;
-        $filter = new Laminas\Log\Filter\Priority( $loglevel );
+        $filter = new Laminas\Log\Filter\Priority($loglevel);
 
         $writer = new Laminas\Log\Writer\Stream($this->log_stream);
         $writer->addFilter($filter);
@@ -58,11 +59,11 @@ trait LoggerTrait
     /**
      * @return \Laminas\Log\Logger
      */
-    protected function createLaminasLogger() : Laminas\Log\LoggerInterface
+    protected function createLaminasLogger(): Laminas\Log\LoggerInterface
     {
         $writer = $this->createLaminasLogWriter();
 
-        $laminasLogLogger = new Laminas\Log\Logger;
+        $laminasLogLogger = new Laminas\Log\Logger();
         $laminasLogLogger->addWriter($writer);
 
         return $laminasLogLogger;
