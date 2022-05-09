@@ -55,7 +55,7 @@ $ composer phpunit
 
 ### Unit tests
 
-Default configuration is **phpunit.xml.dist.** Create a custom **phpunit.xml** to apply yuor own settings.
+Default configuration is **phpunit.xml.dist.** Create a custom **phpunit.xml** to apply your own settings.
 
 ```bash
 $ composer phpunit
@@ -65,7 +65,7 @@ $ vendor/bin/phpunit
 
 ### PhpStan
 
-Default configuration is **phpstan.neon.dist.** Create a custom **phpstan.neon** to apply yuor own settings.
+Default configuration is **phpstan.neon.dist.** Create a custom **phpstan.neon** to apply your own settings.
 
 ```bash
 $ composer phpstan
