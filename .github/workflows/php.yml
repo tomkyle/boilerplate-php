@@ -4,7 +4,7 @@
 # A GitHub workflow to check the compatibility of your PHP package with a range of dependency versions
 # https://tech.osteel.me/posts/a-github-workflow-to-check-the-compatibility-of-your-php-package-with-a-range-of-dependency-versions
 
-name: PHP Composer PHPUnit
+name: Tests
 
 on:
   push:
@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   phpunit:
-    name: PHPUnit
+    name: Tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -49,3 +49,6 @@ jobs:
 
       - name: Run PHPUnit
         run: vendor/bin/phpunit tests
+
+      - name: Run phpstan
+        run: vendor/bin/phpstan analyse
