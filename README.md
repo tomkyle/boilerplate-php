@@ -92,6 +92,12 @@ $ composer phpcs:apply
 $ vendor/bin/php-cs-fixer fix --verbose --diff
 ```
 
+**On PHP 8.2, setting environment variable `PHP_CS_FIXER_IGNORE_ENV` is needed:**
+
+```bash
+$ PHP_CS_FIXER_IGNORE_ENV=1 composer phpcs
+```
+
 
 
 
