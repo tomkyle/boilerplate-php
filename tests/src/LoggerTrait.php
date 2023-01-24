@@ -69,7 +69,7 @@ trait LoggerTrait
     protected function createLaminasLogger(): Laminas\Log\LoggerInterface
     {
         $laminasLogLogger = new Laminas\Log\Logger();
-        $laminasLogLogger->addProcessor(new Laminas\Log\Processor\PsrPlaceholder);
+        $laminasLogLogger->addProcessor(new Laminas\Log\Processor\PsrPlaceholder());
 
         $writer = $this->createLaminasLogWriter();
         $laminasLogLogger->addWriter($writer);
