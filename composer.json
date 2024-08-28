@@ -23,7 +23,7 @@
     },
 
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.3",
         "ext-json": "*",
         "psr/log": "^1.1|^2.0|^3.0",
         "psr/cache": "^1.0|^2.0|^3.0",
@@ -36,13 +36,15 @@
         "guzzlehttp/guzzle": "^7.0",
         "symfony/cache": "^5.0|^6.0",
 
-        "phpunit/phpunit": "^9.0",
+        "phpunit/phpunit": "^9.6",
         "phpspec/prophecy-phpunit": "^2.0",
         "php-coveralls/php-coveralls": "^2.0",
-        "friendsofphp/php-cs-fixer": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.63",
         "spatie/phpunit-watcher": "^1.0",
-        "phpstan/phpstan": "^1.0",
-        "laminas/laminas-log": "^2.15"
+        "phpstan/phpstan": "^1.12",
+        "laminas/laminas-log": "^2.15",
+        "tomkyle/find-run-test": "^1.0",
+        "rector/rector": "^1.2"
     },
 
     "scripts": {
