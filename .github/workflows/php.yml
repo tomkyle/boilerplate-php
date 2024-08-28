@@ -28,6 +28,7 @@ jobs:
           - "8.0"
           - "8.1"
           - "8.2"
+          - "8.3"
         dependency-versions:
           - "lowest"
           - "highest"
@@ -48,7 +49,7 @@ jobs:
           dependency-versions: ${{ matrix.dependency-versions }}
 
       - name: Run PHPUnit
-        run: vendor/bin/phpunit tests
+        run: vendor/bin/phpunit tests --no-coverage
 
       - name: Run phpstan
         run: vendor/bin/phpstan analyse
