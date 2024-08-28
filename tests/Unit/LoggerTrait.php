@@ -30,9 +30,6 @@ trait LoggerTrait
     public $log_stream = 'php://output';
 
 
-    /**
-     * @return \Psr\Log\LoggerInterface
-     */
     protected function getLogger(): Psr\Log\LoggerInterface
     {
         if ($this->logger) {
@@ -40,9 +37,9 @@ trait LoggerTrait
         }
 
         $laminas_logger = $this->createLaminasLogger();
-        $psr_logger = new Laminas\Log\PsrLoggerAdapter($laminas_logger);
+        $psrLoggerAdapter = new Laminas\Log\PsrLoggerAdapter($laminas_logger);
 
-        $this->setLogger($psr_logger);
+        $this->setLogger($psrLoggerAdapter);
 
         return $this->logger;
     }
@@ -54,12 +51,12 @@ trait LoggerTrait
     protected function createLaminasLogWriter(): Laminas\Log\Writer\AbstractWriter
     {
         $loglevel = ($GLOBALS['LAMINAS_LOGLEVEL'] ?? $this->loglevel) ?: $this->loglevel;
-        $filter = new Laminas\Log\Filter\Priority($loglevel);
+        $priority = new Laminas\Log\Filter\Priority($loglevel);
 
-        $writer = new Laminas\Log\Writer\Stream($this->log_stream);
-        $writer->addFilter($filter);
+        $stream = new Laminas\Log\Writer\Stream($this->log_stream);
+        $stream->addFilter($priority);
 
-        return $writer;
+        return $stream;
     }
 
 

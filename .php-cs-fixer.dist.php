@@ -7,11 +7,14 @@ file that was distributed with this source code.
 EOF;
 
 $finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__ . '/')
-    ->exclude(__DIR__ . '/vendor');
+    ->in([
+        __DIR__ . '/src',
+        __DIR__ . '/tests'
+    ]);
 
 return (new PhpCsFixer\Config())->setRules([
-    '@PSR12' => true,
+    '@PER-CS' => true,
+
     'header_comment' => [
         'comment_type' => 'PHPDoc',
         'header' => $header,

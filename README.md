@@ -1,6 +1,9 @@
 <h1 align="center">PHP Package Boilerplate</h1>
 
+[![Packagist](https://img.shields.io/packagist/v/tomkyle/boilerplate-php.svg?style=flat)](https://packagist.org/packages/tomkyle/boilerplate-php )
+[![PHP version](https://img.shields.io/packagist/php-v/tomkyle/boilerplate-php.svg)](https://packagist.org/packages/tomkyle/boilerplate-php )
 [![PHP Composer](https://github.com/tomkyle/boilerplate-php/actions/workflows/php.yml/badge.svg)](https://github.com/tomkyle/boilerplate-php/actions/workflows/php.yml)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
 **A template repository for PHP package.**
 
@@ -12,6 +15,7 @@
 $ composer create-project tomkyle/boilerplate-php new-project  
 $ cd new-project
 $ composer install
+$ npm install
 ```
 
 
@@ -41,61 +45,10 @@ $ composer require guzzlehttp/guzzle
 
 ## Development
 
-### Run all tests
-
-This packages has predefined test setups for code quality, code readability and unit tests. Check them out at the `scripts` section of **[composer.json](./composer.json)**.
+Run `npm update` and watch the file system for PHP code changes. See [package.json](package.json) for a list of all watch and test tasks.
 
 ```bash
-$ composer test
-# ... which includes
-$ composer phpstan
-$ composer phpcs
-$ composer phpunit
-```
-
-### Unit tests
-
-Default configuration is **[phpunit.xml.dist](./phpunit.xml.dist).** Create a custom **phpunit.xml** to apply your own settings. 
-Also visit [phpunit.readthedocs.io](https://phpunit.readthedocs.io/) · [Packagist](https://packagist.org/packages/phpunit/phpunit)
-
-```bash
-$ composer phpunit
-# ... or
-$ vendor/bin/phpunit
-```
-
-### PhpStan
-
-Default configuration is **[phpstan.neon.dist](./phpstan.neon.dist).** Create a custom **phpstan.neon** to apply your own settings. Also visit [phpstan.org](https://phpstan.org/) · [GitHub](https://github.com/phpstan/phpstan) · [Packagist](https://packagist.org/packages/phpstan/phpstan)
-
-```bash
-$ composer phpstan
-# ... which includes
-$ vendor/bin/phpstan analyse
-```
-
-### PhpCS
-
-Default configuration is **[.php-cs-fixer.dist.php](./.php-cs-fixer.dist.php).** Create a custom **.php-cs-fixer.php** to apply your own settings. Also visit [cs.symfony.com](https://cs.symfony.com/) ·  [GitHub](https://github.com/FriendsOfPHP/PHP-CS-Fixer) · [Packagist](https://packagist.org/packages/friendsofphp/php-cs-fixer)
-
-```bash
-$ composer phpcs
-# ... which aliases
-$ vendor/bin/php-cs-fixer fix --verbose --diff --dry-run
-```
-
-Apply all CS fixes:
-
-```bash
-$ composer phpcs:apply
-# ... which aliases 
-$ vendor/bin/php-cs-fixer fix --verbose --diff
-```
-
-**On PHP 8.2, setting environment variable `PHP_CS_FIXER_IGNORE_ENV` is needed:**
-
-```bash
-$ PHP_CS_FIXER_IGNORE_ENV=1 composer phpcs
+$ nmp run watch
 ```
 
 
