@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+echo "Running pre-commit checks..."
+
+# Run PhpUnit only if test classes exist
+echo "Running PhpUnit..."
+npm run phpunit:short
+if [ $? -ne 0 ]; then
+	echo "PhpUnit failed. Commit aborted."
+	exit 1
+fi
+
+# Run PHPStan
+echo "Running PHPStan..."
+npm run phpstan
+if [ $? -ne 0 ]; then
+	echo "PHPStan failed. Commit aborted."
+	exit 1
+fi
+
+# Run Rector
+echo "Running Rector..."
+npm run rector
+if [ $? -ne 0 ]; then
+	echo "Rector failed. Commit aborted."
+	exit 1
+fi
+
+# Run PHPCS
+echo "Running PHPCS..."
+PHP_CS_FIXER_IGNORE_ENV=1 npm run phpcs
+if [ $? -ne 0 ]; then
+	echo "PHPCS failed. Commit aborted."
+	exit 1
+fi
+
+echo "All pre-commit checks passed!"
+exit 0
