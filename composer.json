@@ -1,6 +1,16 @@
 {
   "name": "tomkyle/boilerplate-php",
-  "description": "PHP Package boilerplate",
+  "description": "PHP package boilerplate. Automatically runs PHPUnit, PHPStan, Rector, and PHP-CS-Fixer on file changes.",
+
+  "keywords": [
+    "package-develeopment",
+    "boilerplate",
+    "php",
+    "phpunit",
+    "phpstan",
+    "rector",
+    "php-cs-fixer"
+  ],
 
   "authors": [{
       "name": "Carsten Witt",
