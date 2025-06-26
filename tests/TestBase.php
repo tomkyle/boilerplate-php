@@ -3,7 +3,7 @@
 /**
  * This file is part of tomkyle/boilerplate-php
  *
- * PHP Package boilerplate
+ * PHP package boilerplate. Automatically runs PHPUnit, PHPStan, Rector, and PHP-CS-Fixer on file changes.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
