@@ -82,14 +82,12 @@ Whenever a PHP file is changed, the following tasks are run:
 $ nmp run
 ```
 
-**watch**
-    npm-run-all -p watch:*
+**watch** watches `src/` and `tests/` directory
 
-**phpstan** runs PHPStan.
-    ./vendor/bin/phpstan --no-progress analyse
+**phpstan** runs PHPStan static analysis 
 
 **phpcs** runs PHP CS Fixer as a dry run, use `phpcs:apply` to actually apply changes.
 
 **rector**  runs Rector as a dry run, use `rector:apply` to actually apply changes.
 
-**phpunit** runs PHPUnit tests with textdox and coverage report if available.
+**phpunit** runs PHPUnit tests with *textdox* and *coverage* report if available.
