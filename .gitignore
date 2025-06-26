@@ -42,17 +42,17 @@ Icon
 
 # Project files     #
 ######################
-_schrott
+.env
 vendor
 node_modules
 var/*
 logs/*
 tests/build/*
+tests/caches
 phpunit.xml
-.phpunit.result.cache
 phpstan.neon
 .php-cs-fixer.php
-.php-cs-fixer.cache
+!tests/setup/.php-cs-fixer.php
 
 
 
