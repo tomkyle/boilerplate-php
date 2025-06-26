@@ -63,10 +63,10 @@ $ composer require guzzlehttp/guzzle
 
 ### Watch PHP source code
 
-Run `npm update` and watch the file system for PHP code changes. See [package.json](package.json) for a list of all watch and test tasks.
+Watch the file system for PHP code changes. Unit and code quality tests are automatically triggered. To manually trigger a test run, see [package.json](package.json) for a list of all test tasks:
 
 ```bash
-$ nmp run watch
+$ npm run watch
 ```
 
 Whenever a PHP file is changed, the following tasks are run:
@@ -75,19 +75,19 @@ Whenever a PHP file is changed, the following tasks are run:
 - [PHPStan](https://phpstan.org/) static analysis
 - [Rector](https://getrector.com/) to fix code style issues
 
+[PHP CS Fixer](https://cs.symfony.com/) is not automatically applied, but you can invoke it manually with `npm run phpcs` or `npm run phpcs:apply` to apply the changes. It will, however, automatically be executed on `git commit`.
 
 ### Available npm scripts:
 
+
 ```bash
-$ nmp run
+$ npm run
 ```
 
-**watch** watches `src/` and `tests/` directory
+**Overview:**
 
-**phpstan** runs PHPStan static analysis 
-
-**phpcs** runs PHP CS Fixer as a dry run, use `phpcs:apply` to actually apply changes.
-
-**rector**  runs Rector as a dry run, use `rector:apply` to actually apply changes.
-
-**phpunit** runs PHPUnit tests with *textdox* and *coverage* report if available.
+- **watch** watches `src/` and `tests/` directory
+- **phpstan** runs *PHPStan* static analysis 
+- **phpcs** runs *PHP CS Fixer* as a dry run, use `phpcs:apply` to actually apply changes.
+- **rector**  runs *Rector* as a dry run, use `rector:apply` to actually apply changes.
+- **phpunit** runs *PHPUnit* tests with *textdox* and *coverage* report if available.
