@@ -62,6 +62,7 @@
   "scripts": {
     "setup-tests": [
       "install -d .git/hooks && install -C -m 755 tests/setup/pre-commit .git/hooks/pre-commit",
+
       "install -C -m 644 tests/setup/.php-cs-fixer.php .php-cs-fixer.php"
     ],
     "post-install-cmd": "@setup-tests",

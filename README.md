@@ -1,9 +1,10 @@
 <h1 align="center">PHP Package Boilerplate</h1>
 
-[![Packagist](https://img.shields.io/packagist/v/tomkyle/boilerplate-php.svg?style=flat)](https://packagist.org/packages/tomkyle/boilerplate-php )
-[![PHP version](https://img.shields.io/packagist/php-v/tomkyle/boilerplate-php.svg)](https://packagist.org/packages/tomkyle/boilerplate-php )
-[![PHP Composer](https://github.com/tomkyle/boilerplate-php/actions/workflows/php.yml/badge.svg)](https://github.com/tomkyle/boilerplate-php/actions/workflows/php.yml)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![Composer Version](https://img.shields.io/packagist/v/tomkyle/boilerplate-php)](https://packagist.org/packages/tomkyle/boilerplate-php )
+[![PHP version](https://img.shields.io/packagist/php-v/tomkyle/boilerplate-php)](https://packagist.org/packages/tomkyle/boilerplate-php )
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/tomkyle/boilerplate-php/php.yml)](https://github.com/tomkyle/boilerplate-php/actions/workflows/php.yml)
+[![Packagist License](https://img.shields.io/packagist/l/tomkyle/boilerplate-php)](LICENSE)
+
 
 **A template repository for PHP package.**
 
